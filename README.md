@@ -6,6 +6,7 @@ cd CMSSW_13_1_0/src
 cmsenv
 
 git clone git@github.com:shachargot/r3k-sPlot.git
+scram b -j 8
 ```
 
 # Create sPlots
