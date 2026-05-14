@@ -1,0 +1,71 @@
+datasets:
+  data_file_jpsi: /eos/cms/store/group/phys_bphys/DiElectronX/sgottlie/r3k-integration/post_bdt_ntuples/jpsi_wScores/measurement_data_jpsi_mix.root
+  jpsi_file: /eos/cms/store/group/phys_bphys/DiElectronX/sgottlie/r3k-integration/post_bdt_ntuples/jpsi_wScores/measurement_jpsi_mix.root
+  tree_name: mytree
+  b_mass_branch: Bmass
+  ll_mass_branch: Mll
+
+datasets_sWeight: 
+  data_file_jpsi: measurement_data_jpsi_mix_sPlot.root
+  jpsi_file: measurement_jpsi_mix_sPlot.root
+  tree_name: mytree
+  mc_weight_branch: total_weight
+  data_weight_branch: sWeight
+
+sWeight_list: signal_sWeights.txt
+
+cutset: "Bmass>4.5 && Bmass<5.7 && Mll > 2.9 && Mll < 3.2 && Bpt > 15 && L1pt > 5 && L2pt > 5 && TMath::Abs(L1eta) < 1.4 && TMath::Abs(L2eta) < 1.4 && Bcos > 0.999 && Bprob > 0.0001 && Kpt > 1 && BsLxy > 4"
+# cutset: "BToKEE_fit_mass>4.5 && BToKEE_fit_mass<5.7 && BToKEE_mll_fullfit > 2.9 && BToKEE_mll_fullfit < 3.2 && BToKEE_fit_pt>15 && BToKEE_fit_l1_pt>5 && BToKEE_fit_l2_pt>5 && TMath::Abs(BToKEE_fit_l1_eta)<1.4 && TMath::Abs(BToKEE_fit_l2_eta)<1.4 && BToKEE_fit_cos2D>0.999 && BToKEE_svprob>0.0001 && BToKEE_fit_k_pt>1 && BToKEE_l_xy_sig>4" 
+
+variables:
+   bdt_score:
+     name: "BDT Score"
+     range: [0.99, 0.9999]
+   Bcos:
+     name: '$cos(\alpha_{2D})$'
+     range: [0.9995, 0.9999]
+   Biso: 
+     name: "B Isolation"
+     range: [0, 100]
+   Bprob: 
+     name: "Prob(Vertex B)"
+     range: [0.1, 1]
+   BsLxy:
+     name: '$L_{xy}(B)/\sigma$'
+     range: [4, 100]
+   L1id: 
+     name: "Leading Electron ID"
+     range: [-6., 6.]
+   L2id:
+     name: "Subleading Electron ID"
+     range: [-6., 6.]
+   Passymetry:
+     name: "Transverse Momentum Assymetry"
+     range: [-1., 1.]
+   LKdz:
+     name: '$\Delta Z(K, L)$'
+     range: [0.01, 0.999]
+   LKdr:
+     name: '$\Delta R(K,L)$'
+     range: [0, 1]
+   Npv:
+     name: "Npv"
+     range: [0, 100]
+   KLmassD0:
+     name: '$M_{KLmassD0}$'
+     range: [2, 6] 
+    
+   L2iso/L2pt: 
+      name: 'L2 isolation / $p_T(L2)$'
+      range: [0, 10]
+      frac: True
+   Kiso/Kpt: 
+      name: 'K isolation / $p_T(K)$'
+      range: [0, 40]
+      frac: True
+   Kip3d/Kip3dErr:
+      name: 'Track $d_{3D}/\sigma$'
+      range: [-10., 10]
+      frac: True
+        
+ 
