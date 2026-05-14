@@ -10,7 +10,7 @@ git clone git@github.com:shachargot/r3k-sPlot.git
 
 # Create sPlots
 ## Steps:
-1. Make sWeight txt file from [r3k-fitter](git@github.com:shachargot/r3k-fitter.git) using `--splot` option
+1. Make sWeight txt file from [r3k-fitter](https://github.com/shachargot/r3k-fitter.git) using `--splot` option
 2. Configure `config.yml` with input jpsi data and MC files, and input sWeight txt file from (1) 
 3. Run `sWeight.py` to apply sWeights to data
 ```
